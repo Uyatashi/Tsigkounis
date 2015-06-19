@@ -1,0 +1,5 @@
+response.xpath=('//div[contains(concat(' ',@class,' '),' subcolumns ') and (contains(concat(' ',@class,' '),' dashedln '))]')
+response.xpath=('//div[tokenize(@class," ")="subcolumns dashedln"])
+
+//CORRECT
+response.xpath('//div[contains(@class,"subcolumns dashedln")]')
