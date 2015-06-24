@@ -1,3 +1,5 @@
+__author__ = 'Antonios'
+
 # -*- coding: utf-8 -*-
 from scrapy.contrib.spiders import CrawlSpider, Rule
 from scrapy.contrib.linkextractors.sgml import SgmlLinkExtractor
@@ -7,10 +9,11 @@ class Product(Item):
     name = Field()
 
 
-class StephanisSpider(CrawlSpider):
-    name = "stephanis"
-    allowed_domains = ["stephanis.com.cy"]
-    start_urls = ['http://www.stephanis.com.cy/']
+
+class PublicSpider(CrawlSpider):
+    name = "public-cyprus"
+    allowed_domains = ["public-cyprus.com.cy"]
+    start_urls = ['http://www.public-cyprus.com.cy/']
 
     rules = (Rule(SgmlLinkExtractor(), callback='parse_url', follow=False), )
 

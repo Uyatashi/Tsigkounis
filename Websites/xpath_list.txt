@@ -3,3 +3,6 @@ response.xpath=('//div[tokenize(@class," ")="subcolumns dashedln"])
 
 //CORRECT
 response.xpath('//div[contains(@class,"subcolumns dashedln")]')
+
+//SELECT ALL LINKS(IN BODY)
+response.xpath('//body//a/@href')
